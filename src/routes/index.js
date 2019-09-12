@@ -2,9 +2,9 @@ import { Router } from 'express';
 
 const apiRouter = Router();
 
-apiRouter.get('/', (req, res) => {
+apiRouter.use('/', (req, res) => {
   res.status(200).send({
-    status: 'success',
+    status: 200,
     message: 'Welcome to Translator API',
   });
 });
