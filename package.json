@@ -2,10 +2,11 @@
   "name": "translator-backend",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "src/server.js",
   "scripts": {
-    "start": "babel-node ./app.js",
-    "start:dev": "nodemon --exec babel-node ./app.js",
+    "start": "node build/server.js",
+    "build": "rm -rf build && babel src -d build",
+    "start:dev": "nodemon --exec babel-node ./server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -24,6 +25,7 @@
     "express": "^4.17.1"
   },
   "devDependencies": {
+    "@babel/cli": "^7.6.0",
     "@babel/core": "^7.6.0",
     "@babel/node": "^7.6.1",
     "@babel/preset-env": "^7.6.0",
